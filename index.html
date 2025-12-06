@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>人脸识别粒子云</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__content">
+      <p class="hero__eyebrow">Webcam + AI + Particles</p>
+      <h1>捕捉人脸，化作酷炫点云</h1>
+      <p class="hero__subtitle">开启摄像头并实时识别人脸，将面部特征点转换为跳动的粒子，像极了赛博空间的能量流。</p>
+      <div class="hero__actions">
+        <button id="startBtn" class="btn">启动识别</button>
+        <button id="stopBtn" class="btn btn--ghost">停止</button>
+      </div>
+      <p class="hero__hint">首次使用时浏览器会询问摄像头权限。</p>
+    </div>
+  </header>
+
+  <main class="stage">
+    <div class="stage__preview">
+      <video id="video" autoplay muted playsinline></video>
+      <canvas id="overlay"></canvas>
+      <canvas id="particles"></canvas>
+      <div id="status" class="status">加载模型中...</div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>灵感来自点云扫描 | face-api.js + Canvas 粒子引擎</p>
+  </footer>
+</body>
+</html>
